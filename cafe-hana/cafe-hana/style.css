@@ -1,0 +1,203 @@
+/* 1. 기본 설정 — 색상과 글꼴은 여기서 한 번에 바꿀 수 있습니다. */
+:root {
+  --cream: #f7f5ed;
+  --olive: #343d29;
+  --muted: #707365;
+  --line: #d2d3c6;
+  --serif: Georgia, "Times New Roman", "AppleMyungjo", "Batang", serif;
+  --sans: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+}
+
+.members {
+  background-color: yellow;
+}
+
+.members li {
+  color: red;
+}
+
+.score > li {
+  color: blue;
+}
+//이거 왜 안되는지 나중에 효성찬스
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 36px; }
+
+body { margin: 0; color: var(--olive); background: var(--cream); font-family: var(--sans); font-size: 16px; line-height: 1.7; word-break: keep-all; }
+::selection { color: var(--cream); background: var(--olive); }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: auto; }
+figure, h1, h2, h3, p, dl, dd { margin: 0; }
+svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 1.35; flex-shrink: 0; }
+
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 7px; }
+
+
+.wrap { width: min(1280px, calc(100% - 112px)); margin-inline: auto; }
+.skip-link { position: absolute; top: -100px; left: 16px; z-index: 10; padding: 12px 20px; background: var(--olive); color: var(--cream); }
+.skip-link:focus { top: 12px; }
+.section-space { padding-block: 93px 104px; }
+.section-label { font-size: 11px; font-weight: 500; letter-spacing: .19em; }
+.mobile-break { display: none; }
+
+/* 2. 로고와 상단 메뉴 */
+.site-header { display: flex; align-items: center; justify-content: space-between; min-height: 94px; border-bottom: 1px solid var(--line); gap: 24px; }
+.wordmark { font-family: var(--serif); font-size: 32px; letter-spacing: -1.5px; line-height: 1.2; white-space: nowrap; }
+.brand-dot { color: #8e9375; }
+.site-header nav { display: flex; align-items: center; gap: 40px; font-size: 13px; }
+.site-header nav a { padding-block: 14px; }
+.site-header nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
+.site-header nav span { margin-left: 7px; }
+
+/* 3. 첫 화면 — 문구와 사진을 별도로 구성합니다. */
+.hero-intro { display: flex; align-items: flex-end; justify-content: space-between; gap: 36px; padding-block: 61px 59px; }
+h1 { font-family: var(--serif); font-size: clamp(64px, 7.8vw, 116px); font-weight: 400; letter-spacing: -.058em; line-height: 1.03; }
+h1 em { font-weight: 400; }
+.hero-note { padding-bottom: 8px; width: 257px; flex-shrink: 0; }
+.hero-note > p { font-size: 17px; line-height: 1.85; margin-bottom: 28px; }
+.button-link { min-height: 51px; display: flex; justify-content: space-between; align-items: center; gap: 36px; padding: 11px 19px; border: 1px solid var(--olive); font-size: 13px; transition: color .2s, background .2s; }
+.button-link:hover { background: var(--olive); color: var(--cream); }
+.hero-photo { position: relative; height: clamp(400px, 39vw, 570px); overflow: hidden; background: #b1a28d; }
+.hero-photo > img { height: 100%; object-fit: cover; object-position: center 65%; }
+.hero-photo figcaption { position: absolute; left: max(56px, calc((100% - 1280px) / 2)); bottom: 28px; color: white; font-family: var(--serif); font-style: italic; font-size: 20px; text-shadow: 0 1px 8px #0008; }
+.photo-footnote { display: flex; justify-content: space-between; padding-block: 17px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 10px; letter-spacing: .12em; }
+.photo-footnote span:last-child { letter-spacing: .02em; }
+
+/* 4. 대표 메뉴 — 한 장의 사진에서 각 메뉴 영역을 보여줍니다. */
+.section-heading { display: flex; align-items: center; gap: 28px; margin-bottom: 34px; }
+.section-heading h2 { font-family: var(--serif); font-size: clamp(24px, 2.35vw, 34px); font-weight: 400; letter-spacing: -.065em; line-height: 1.5; }
+.heading-rule { height: 1px; flex: 1; background: var(--line); }
+.menu-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.menu-photo { position: relative; aspect-ratio: 1; overflow: hidden; background: #e5ddcd; }
+.menu-photo img { position: absolute; top: 0; width: 300%; max-width: none; height: 100%; object-fit: cover; object-position: center 66%; transition: transform .5s ease; }
+.menu-photo-first img { left: 0; }
+.menu-photo-second img { left: -100%; }
+.menu-photo-third img { left: -200%; }
+.menu-name { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 20px 0 13px; border-bottom: 1px solid var(--line); }
+.menu-name h3 { font-size: 18px; font-weight: 500; letter-spacing: -.045em; }
+.menu-name > p { font-family: var(--serif); font-size: 17px; white-space: nowrap; }
+.menu-name > p > span { font-family: var(--sans); font-size: 12px; margin-left: 2px; }
+.menu-description { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.9; letter-spacing: -.025em; }
+.menu-note { margin-top: 27px; font-size: 11px; color: var(--muted); }
+.menu-note span { margin-left: 8px; }
+
+/* 5. 브랜드 이야기 */
+.story-section { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; gap: 80px; padding-block: 0 106px; }
+.story-photo img { height: 500px; object-fit: cover; object-position: 45% center; }
+.story-photo figcaption { padding-top: 12px; font-size: 11px; color: var(--muted); }
+.story-copy .section-label { margin-bottom: 22px; }
+.story-copy h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3vw, 44px); letter-spacing: -.07em; line-height: 1.55; }
+.story-text { display: grid; gap: 15px; margin-top: 26px; color: var(--muted); font-size: 13px; line-height: 1.95; letter-spacing: -.02em; }
+.text-link { display: inline-flex; align-items: center; gap: 24px; margin-top: 26px; padding-bottom: 7px; border-bottom: 1px solid var(--olive); font-size: 12px; }
+.text-link svg { transition: transform .2s; }
+.text-link:hover svg { transform: translateX(4px); }
+
+/* 6. 방문 안내와 하단 */
+.visit-section { padding-top: 65px; color: var(--cream); background: var(--olive); }
+.visit-content { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; padding-bottom: 62px; }
+.visit-intro h2 { font-family: var(--serif); font-size: clamp(40px, 4.9vw, 70px); font-weight: 400; letter-spacing: -.04em; line-height: 1.2; }
+.visit-intro > p { margin-top: 19px; font-family: var(--serif); font-size: 23px; letter-spacing: -.03em; }
+.visit-details { border-left: 1px solid #747b64; padding-left: 46px; }
+.visit-details dl { display: grid; gap: 22px; }
+.visit-details dl > div { display: grid; grid-template-columns: 83px 1fr; gap: 16px; }
+.visit-details dt { padding-top: 4px; color: #d1d4c4; font-size: 11px; }
+.visit-details dd { font-size: 14px; }
+.visit-details .hours { margin-left: 18px; font-family: var(--serif); font-size: 20px; }
+.visit-details small { display: block; margin-top: 5px; color: #d1d4c4; font-size: 11px; }
+address { font-style: normal; }
+.fiction-note { border-top: 1px solid #747b64; margin-top: 23px; padding-top: 13px; color: #d1d4c4; font-size: 10px; }
+.site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 23px 27px; border-top: 1px solid #747b64; }
+.site-footer .wordmark { font-size: 25px; }
+.site-footer > p { color: #d1d4c4; font-size: 10px; }
+.back-top { font-size: 11px; }
+.back-top span { padding-left: 10px; }
+.back-top:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+/* 7. 태블릿 */
+@media (max-width: 1000px) {
+  .wrap { width: calc(100% - 64px); }
+  .site-header { min-height: 82px; }
+  .hero-intro { padding-block: 47px; gap: 24px; }
+  .hero-note { width: 210px; }
+  .hero-note > p { font-size: 14px; }
+  .button-link { gap: 16px; }
+  .hero-photo figcaption { left: 32px; }
+  .section-space { padding-block: 65px 70px; }
+  .menu-grid { gap: 20px; }
+  .menu-name h3 { font-size: 16px; }
+  .menu-description br, .desktop-break { display: none; }
+  .story-section { gap: 40px; padding-bottom: 75px; }
+  .story-photo img { height: 500px; }
+  .story-text { font-size: 12px; }
+  .visit-content { gap: 32px; grid-template-columns: 1fr 1fr; }
+  .visit-details { padding-left: 26px; }
+  .visit-details dl > div { display: block; }
+  .visit-details dt { margin-bottom: 5px; }
+}
+
+/* 8. 모바일 — 메뉴와 이야기를 세로로 배치합니다. */
+@media (max-width: 650px) {
+  html { scroll-padding-top: 22px; }
+  .wrap { width: calc(100% - 40px); }
+  .site-header { min-height: 77px; gap: 14px; }
+  .wordmark { font-size: 26px; }
+  .site-header nav { gap: 17px; font-size: 11px; }
+  .site-header nav span { display: none; }
+  .hero-intro { display: block; padding-block: 39px 34px; }
+  h1 { font-size: clamp(51px, 12vw, 78px); letter-spacing: -.06em; line-height: 1.08; }
+  .hero-note { display: flex; justify-content: space-between; align-items: center; gap: 14px; width: 100%; padding: 0; margin-top: 29px; }
+  .hero-note > p { font-size: 12px; margin-bottom: 0; }
+  .button-link { min-height: 45px; padding: 9px 12px; gap: 15px; font-size: 11px; }
+  .button-link svg { width: 15px; height: 15px; }
+  .hero-photo { height: 380px; }
+  .hero-photo > img { object-position: 45% 65%; }
+  .hero-photo figcaption { left: 20px; bottom: 19px; font-size: 17px; }
+  .photo-footnote { font-size: 8px; letter-spacing: .09em; padding-block: 13px; }
+  .section-space { padding-block: 53px 60px; }
+  .section-heading { align-items: flex-end; justify-content: space-between; gap: 15px; margin-bottom: 25px; }
+  .section-heading h2 { font-size: 25px; line-height: 1.55; }
+  .mobile-break { display: initial; }
+  .heading-rule { display: none; }
+  .section-heading .section-label { padding-bottom: 6px; font-size: 8px; letter-spacing: .12em; }
+  .menu-grid { grid-template-columns: 1fr; gap: 34px; }
+  .menu-photo { aspect-ratio: 1; }
+  .menu-name { padding-top: 16px; }
+  .menu-name h3 { font-size: 18px; }
+  .menu-description { font-size: 13px; margin-top: 10px; }
+  .menu-note { font-size: 10px; margin-top: 24px; }
+  .menu-note span { display: block; margin-left: 0; }
+  .story-section { grid-template-columns: 1fr; gap: 30px; padding-bottom: 58px; }
+  .story-photo img { height: auto; aspect-ratio: 1.1; }
+  .story-photo figcaption { font-size: 10px; }
+  .story-copy .section-label { margin-bottom: 15px; font-size: 10px; }
+  .story-copy h2 { font-size: 35px; line-height: 1.5; }
+  .story-text { font-size: 13px; gap: 17px; margin-top: 22px; }
+  .visit-section { padding-top: 41px; }
+  .visit-content { grid-template-columns: 1fr; gap: 31px; padding-bottom: 34px; }
+  .visit-intro h2 { font-size: clamp(39px, 10.4vw, 58px); }
+  .visit-intro > p { margin-top: 11px; font-size: 19px; }
+  .visit-details { border-left: 0; border-top: 1px solid #747b64; padding: 26px 0 0; }
+  .visit-details dl > div { display: grid; grid-template-columns: 74px 1fr; gap: 11px; }
+  .visit-details .hours { font-size: 19px; margin-left: 14px; }
+  .visit-details dd { font-size: 13px; }
+  .fiction-note { font-size: 9px; }
+  .site-footer { flex-wrap: wrap; gap: 15px; padding-block: 22px; }
+  .site-footer > p { order: 3; width: 100%; font-size: 9px; }
+}
+
+@media (max-width: 360px) {
+  .site-header nav { gap: 11px; font-size: 10px; }
+  .wordmark { font-size: 24px; }
+  h1 { font-size: 48px; }
+  .hero-note { gap: 8px; }
+  .button-link { gap: 9px; }
+  .visit-details dl > div { grid-template-columns: 64px 1fr; }
+}
+
+/* 동작 줄이기를 선택한 사용자는 부드러운 스크롤 없이 이동합니다. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}

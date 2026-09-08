@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ed" />
+    <meta name="description" content="하루에 하나, 나를 위한 느긋한 시간. 정성껏 내린 커피와 갓 구운 빵이 있는 가상의 동네 카페, 카페 하나입니다." />
+    <title>카페 하나 — 당신의 하루에, 하나의 쉼표</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="top">
+
+<div class="members">
+
+  <ol class = "score">
+      <li>신윤수</li>
+      <li>한수지</li>
+      <li>송영진</li>
+    </ol>   
+  
+  <ul>
+    <li>신윤수</li>
+    <li>한수지</li>
+    <li>송영진</li>
+  </ul>
+    </div>
+
+
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+
+    <!-- 상단 메뉴: JavaScript 없이 페이지 안의 각 영역으로 이동합니다. -->
+    <header class="site-header wrap">
+      <a class="wordmark" href="#top" aria-label="카페 하나, 처음으로">cafe hana<span class="brand-dot" aria-hidden="true">.</span></a>
+      <nav aria-label="주요 메뉴">
+        <a href="#story">우리의 이야기</a>
+        <a href="#menu">메뉴</a>
+        <a href="#visit">공간과 위치 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- 첫 화면 -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-intro wrap">
+          <h1 id="hero-title" lang="en">A little pause,<br /><em>a lovely day.</em></h1>
+          <div class="hero-note">
+            <p>하루에 하나,<br />나를 위한 느긋한 시간.</p>
+            <a class="button-link" href="#menu">하나의 메뉴 보기 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="images/cafe-window.png" width="1536" height="1024" alt="초록 정원이 보이는 햇살 가득한 창가, 나무 테이블 위의 라테와 소금빵" fetchpriority="high" />
+          <figcaption lang="en">Coffee, calm &amp; a little joy.</figcaption>
+        </figure>
+        <div class="photo-footnote wrap" aria-hidden="true"><span>A SLOW MOMENT, JUST FOR YOU</span><span>천천히 머물다 가세요.</span></div>
+      </section>
+
+      <!-- 대표 메뉴: 이름, 가격, 설명을 이곳에서 수정하세요. -->
+      <section class="menu-section wrap section-space" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <h2 id="menu-title">하나에서 만나는<br class="mobile-break" /> 작은 즐거움</h2>
+          <span class="heading-rule" aria-hidden="true"></span>
+          <span class="section-label" lang="en">OUR FAVORITES</span>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <div class="menu-photo menu-photo-first"><img src="images/signature-menu.png" alt="코코아를 살짝 뿌린 부드러운 크림이 올라간 아이스 라테" width="1536" height="1024" loading="lazy" /></div>
+            <div class="menu-name"><h3>하나 크림 라테</h3><p>6,500<span>원</span></p></div>
+            <p class="menu-description">고소한 에스프레소에 부드러운 크림 한 겹.<br />첫 모금부터 마지막까지, 하나답게.</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-photo menu-photo-second"><img src="images/signature-menu.png" alt="도자기 접시에 담긴 노릇하고 윤기 있게 구운 버터 소금빵" width="1536" height="1024" loading="lazy" /></div>
+            <div class="menu-name"><h3>버터 소금빵</h3><p>3,800<span>원</span></p></div>
+            <p class="menu-description">바삭한 바닥, 촉촉한 속, 은은한 버터 향.<br />매일 아침 구워내는 작고 확실한 행복.</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-photo menu-photo-third"><img src="images/signature-menu.png" alt="진한 초록빛 말차와 우유가 층을 이룬 아이스 말차 라테" width="1536" height="1024" loading="lazy" /></div>
+            <div class="menu-name"><h3>말차 라테</h3><p>6,000<span>원</span></p></div>
+            <p class="menu-description">쌉싸름한 말차와 담백한 우유의 균형.<br />서두르지 않고 음미하고 싶은 초록 한 잔.</p>
+          </article>
+        </div>
+        <p class="menu-note">음료는 디카페인으로도 즐길 수 있어요. <span>빵은 준비한 수량이 소진되면 일찍 마감됩니다.</span></p>
+      </section>
+
+      <!-- 브랜드 이야기 -->
+      <section class="story-section wrap" id="story" aria-labelledby="story-title">
+        <figure class="story-photo"><img src="images/cafe-interior.png" alt="나무 테이블과 의자, 작은 커피 바와 식물이 어우러진 햇살 드는 카페 하나의 공간" width="1536" height="1024" loading="lazy" /><figcaption>볕이 좋은 자리 하나, 당신을 위해 비워둘게요.</figcaption></figure>
+        <div class="story-copy">
+          <p class="section-label" lang="en">OUR LITTLE STORY</p>
+          <h2 id="story-title">좋은 하루는,<br />작은 쉼에서<br />시작되니까요.</h2>
+          <div class="story-text">
+            <p>늘 무언가를 해야 하는 하루 속에서,<br />아무것도 하지 않아도 괜찮은 곳이 있으면 했어요.</p>
+            <p>좋아하는 잔에 커피를 내리고, 아침마다 빵을 굽고,<br class="desktop-break" /> 창가에 스미는 햇살을 기다립니다.<br />카페 하나는 그렇게 시작된 작은 공간입니다.</p>
+            <p>혼자 읽던 책 한 권도, 오랜 친구와의 이야기도.<br />당신의 속도로 머무는 시간이 되기를 바랍니다.</p>
+          </div>
+          <a class="text-link" href="#visit">하나에 머무는 시간 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></a>
+        </div>
+      </section>
+
+      <!-- 방문 안내: 아래 주소와 운영 시간은 가상의 설정입니다. -->
+      <section class="visit-section" id="visit" aria-labelledby="visit-title">
+        <div class="visit-content wrap">
+          <div class="visit-intro"><h2 id="visit-title" lang="en">See you at hana.</h2><p>당신의 하루에, 하나의 쉼표.</p></div>
+          <div class="visit-details">
+            <dl>
+              <div><dt>문 여는 시간</dt><dd>화–일 <span class="hours">10:00–19:00</span><small>마지막 주문 18:30 · 매주 월요일 휴무</small></dd></div>
+              <div><dt>찾아오는 길</dt><dd><address>서울시 하나구 느린길 12, 1층</address><small>느린 골목 끝, 초록 문이 있는 작은 카페</small></dd></div>
+            </dl>
+            <p class="fiction-note">카페 하나는 가상의 브랜드입니다. 주소와 운영 정보는 예시입니다.</p>
+          </div>
+        </div>
+        <footer class="site-footer wrap">
+          <a class="wordmark" href="#top" aria-label="카페 하나, 처음으로">cafe hana.</a>
+          <p>© 2026 cafe hana. A little pause for everyone.</p>
+          <a class="back-top" href="#top">맨 위로 <span aria-hidden="true">↑</span></a>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

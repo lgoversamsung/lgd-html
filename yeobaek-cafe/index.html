@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#243e32">
+  <meta name="description" content="커피 한 잔 사이, 나를 위한 작은 여백. 숲의 온도를 담은 가상의 카페 여백입니다.">
+  <title>여백 YEOBAEK — 잠시, 머물러도 좋은 곳</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+  <header class="header">
+    <a class="logo" href="#" aria-label="여백 홈">여백<span>YEOBAEK</span></a>
+    <nav aria-label="주요 메뉴"><a href="#story">우리의 이야기</a><a href="#menu">메뉴</a><a href="#space">공간</a></nav>
+    <a class="visit-link" href="#visit">여백에 오시는 길 <span>↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2200&q=85" alt="나무 테이블 위 커피 한 잔과 볶은 원두" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content"><p class="eyebrow">A LITTLE PAUSE, A BETTER DAY</p><h1 id="hero-title">당신의 하루에,<br>작은 <em>여백.</em></h1><p class="hero-description">좋은 커피와 느린 시간.<br>아무것도 하지 않아도 괜찮은 곳.</p><a class="light-button" href="#menu">여백의 한 잔 만나보기 <span>↗</span></a></div>
+      <div class="hero-bottom"><span>COFFEE · STILLNESS · EVERYDAY</span><a href="#story">SCROLL TO DISCOVER <span>↓</span></a></div>
+      <div class="hero-stamp" aria-hidden="true">SLOW DOWN<br><span>葉</span><br>STAY A WHILE</div>
+    </section>
+    <div class="intro-strip"><span>매일의 작은 쉼표가 되는 공간</span><span class="strip-flower" aria-hidden="true">✳</span><span>FIND YOUR OWN PACE.</span><span class="strip-flower" aria-hidden="true">✳</span><span>정성으로 내리는 한 잔의 여유</span></div>
+    <section class="story section-wrap" id="story">
+      <div class="story-visual"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85" alt="햇살이 들어오는 카페의 따뜻한 나무 테이블과 식물" loading="lazy"><span class="photo-caption">A PLACE TO SIMPLY BE.</span><div class="small-note">조금 느려도,<br>충분히 좋은 하루.</div></div>
+      <div class="story-copy"><p class="eyebrow green">01 / OUR STORY</p><h2>빼곡한 일상에<br>비워두는 한 자리.</h2><p>문장과 문장 사이에 쉼표가 필요하듯,<br>우리의 하루에도 작은 빈틈이 필요하니까요.</p><p>여백은 그 단순한 마음에서 시작했습니다.<br>창가로 들어오는 빛, 잔잔하게 흐르는 음악,<br>그리고 정성껏 내린 커피 한 잔.</p><p>무언가를 채우기보다 잠시 비울 수 있도록.<br>당신이 당신의 속도로 머무는 공간이 되고 싶습니다.</p><span class="story-sign">천천히, 깊이, 여백답게.</span></div>
+    </section>
+    <section class="menu-section" id="menu"><div class="section-wrap">
+      <div class="section-heading"><div><p class="eyebrow green">02 / MADE WITH CARE</p><h2>오늘의 여백을 고르세요.</h2></div><p>좋은 재료에 정성을 더하고,<br>꼭 필요한 맛만 남겼습니다.</p></div>
+      <div class="menu-tabs" role="group" aria-label="메뉴 종류"><button class="active" type="button" data-filter="all" aria-pressed="true">전체 메뉴 <span>04</span></button><button type="button" data-filter="coffee" aria-pressed="false">커피</button><button type="button" data-filter="tea" aria-pressed="false">티 & 음료</button><button type="button" data-filter="dessert" aria-pressed="false">디저트</button></div>
+      <div class="menu-grid">
+        <article class="menu-card" data-category="coffee"><div class="menu-image"><span class="badge">SIGNATURE</span><img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=85" alt="부드러운 우유 거품이 올라간 라테" loading="lazy"></div><div class="menu-title"><h3>여백 크림 라테</h3><span>6.5</span></div><p>고소한 에스프레소, 부드러운 수제 바닐라 크림</p><span class="english-name">YEOBAEK CREAM LATTE</span></article>
+        <article class="menu-card" data-category="coffee"><div class="menu-image"><img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=700&q=85" alt="잔에 담긴 깊고 진한 블랙 커피" loading="lazy"></div><div class="menu-title"><h3>오늘의 필터 커피</h3><span>6.0</span></div><p>원두가 가진 이야기를 가장 맑게 담은 한 잔</p><span class="english-name">DAILY FILTER COFFEE</span></article>
+        <article class="menu-card" data-category="tea"><div class="menu-image"><span class="badge pale">CAFFEINE FREE</span><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=85" alt="따뜻하게 우려낸 차 한 잔" loading="lazy"></div><div class="menu-title"><h3>계절의 허브 티</h3><span>6.0</span></div><p>캐모마일과 레몬그라스가 전하는 편안함</p><span class="english-name">SEASONAL HERBAL TEA</span></article>
+        <article class="menu-card" data-category="dessert"><div class="menu-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=85" alt="겹겹이 바삭하게 구워진 버터 크루아상" loading="lazy"></div><div class="menu-title"><h3>버터 크루아상</h3><span>4.5</span></div><p>겹겹이 쌓은 버터의 풍미, 매일 아침의 정성</p><span class="english-name">BUTTER CROISSANT</span></article>
+      </div><p class="menu-footnote">가격은 천 원 단위입니다. 모든 커피는 디카페인으로 변경할 수 있어요. (+0.5)</p>
+    </div></section>
+    <section class="quote-section"><span aria-hidden="true">✳</span><p>잘 쉬어가는 것도,<br><em>하루를 잘 보내는 방법.</em></p><span class="eyebrow">A MOMENT FOR YOURSELF</span></section>
+    <section class="space section-wrap" id="space"><div class="section-heading"><div><p class="eyebrow green">03 / THE SPACE</p><h2>어떤 마음으로 와도, 편안하게.</h2></div><p>혼자여도, 함께여도 좋은<br>당신만의 자리를 찾아보세요.</p></div><div class="space-grid"><figure><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1300&q=85" alt="나무 가구와 따뜻한 조명이 어우러진 카페 내부" loading="lazy"><figcaption><span>01 — 햇살이 머무는 자리</span><span>LIGHT & WARMTH</span></figcaption></figure><figure><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=85" alt="식물과 작은 테이블이 있는 아늑한 카페 공간" loading="lazy"><figcaption><span>02 — 취향을 나누는 시간</span><span>TIME TOGETHER</span></figcaption></figure></div></section>
+    <section class="visit" id="visit"><div class="visit-copy"><p class="eyebrow">04 / COME SAY HELLO</p><h2>오늘도, 여기서<br>기다릴게요.</h2><p class="visit-intro">가벼운 발걸음으로 들러주세요.<br>따뜻한 한 잔은 저희가 준비할게요.</p><dl><div><dt>위치</dt><dd>서울특별시 성동구 여백길 12, 1층 <small>서울숲의 한적한 골목을 상상한 가상의 주소입니다.</small></dd></div><div><dt>영업시간</dt><dd>매일 10:00 — 20:00<small>마지막 주문 19:30 · 반려동물 동반 가능</small></dd></div></dl><div class="visit-message">문을 열면, 커피 향과 작은 인사가 반겨요. <span>↗</span></div></div><div class="illustrated-map" role="img" aria-label="여백 카페의 가상 위치를 표현한 일러스트 지도"><div class="map-park park-one"></div><div class="map-park park-two"></div><div class="map-road road-one"></div><div class="map-road road-two"></div><div class="map-road road-three"></div><div class="map-block block-one"></div><div class="map-block block-two"></div><div class="map-block block-three"></div><span class="map-label forest">서울숲<br><small>SEOUL FOREST</small></span><span class="map-label street">여백길</span><span class="map-label station">○ 서울숲역</span><div class="map-pin"><span>여백</span><small>YOU ARE WELCOME HERE</small></div><span class="map-north">N<br>↑</span><span class="map-disclaimer">ILLUSTRATED MAP · 실제 위치가 아닌 가상 공간입니다</span></div></section>
+  </main>
+  <footer><div class="footer-top"><a class="logo" href="#">여백<span>YEOBAEK</span></a><p>당신의 하루에, 작은 여백.</p><a class="back-top" href="#">BACK TO TOP ↑</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> YEOBAEK. ALL RIGHTS RESERVED.</span><span>여백은 포트폴리오를 위한 가상의 카페 브랜드입니다.</span><span>MADE FOR SLOW MOMENTS</span></div></footer>
+</body>
+</html>
